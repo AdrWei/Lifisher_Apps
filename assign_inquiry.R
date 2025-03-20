@@ -67,8 +67,8 @@ login_response <- GET(
     status = 0,
     sort = "create_time desc"
   )
-      inquiry_ids = '462914'
-  # 请求头
+
+# 请求头
   inquiry_list_headers <- add_headers(
     `User-Agent` = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
     `appkey` = "man2oqlx6oqnf2wzhhrbarih2zlmoe7ckb00aec53knzelpw8ogc4g8ws880o00b",
