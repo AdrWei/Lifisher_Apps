@@ -37,7 +37,7 @@ jobs:
         run: echo '${{ secrets.SHEET_KEY }}' > credentials.json
           
       - name: Run R script
-        run: Rscript Inquiry_File_Update.R
+        run: Rscript inquiry_update.R
         env:
           LIFISHER_CODES: ${{ secrets.LIFISHER_CODES }}
           LIFISHER_TOKEN: ${{ secrets.LIFISHER_TOKEN }}
