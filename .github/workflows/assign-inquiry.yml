@@ -1,4 +1,4 @@
-name: Run R Script
+name: Assign Inquiries
 
 on:
   schedule:
