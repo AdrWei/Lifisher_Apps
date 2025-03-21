@@ -96,19 +96,17 @@ login_response <- GET(
       # 提取询盘数据
       inquiry_list <- inquiry_list_data$data$list
       
-      # 检查是否有数据
-      if (!is.null(inquiry_list) && length(inquiry_list) > 0) {
-        # 提取询盘 ID
-        inquiry_ids <- sapply(inquiry_list, function(x) x$id)  # 假设 id 是询盘 ID 的字段名
-        print("提取的询盘 ID：")
-        print(inquiry_ids)
-      } else {
-        print("没有询盘数据。")
-      }
+    # 检查是否有数据
+    if (!is.null(inquiry_list) && length(inquiry_list) > 0) {
+      # 提取询盘 ID
+      inquiry_ids <- sapply(inquiry_list, function(x) x$id)  # 假设 id 是询盘 ID 的字段名
+      print("未分配询盘 ID：")
+      print(inquiry_ids)
     } else {
-      print("未找到询盘数据字段，请检查响应数据结构。")
+      print("所有询盘均已分配。")
+      return()  # 提前结束，不返回错误信息
     }
-    
+        
     #开始询盘分配 ----
     # 请求头（使用与获取询盘列表相同的请求头）
     assign_headers <- add_headers(
